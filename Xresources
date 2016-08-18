@@ -1,22 +1,22 @@
-!URxvt.font: 9x15
-URxvt*font: xft:Inconsolata for Powerline:pixelsize=18
-Xft.dpi: 96
-Xft.antialias: true
-Xft.hinting: true
-Xft.rgba: rgb
-Xft.autohint: false
-Xft.hintstyle: hintslight
-Xft.lcdfilter: lcddefault
-Xcursor.theme: Chameleon-Pearl-Regular-0.5
-Xcursor.size:  0
-URxvt.depth: 32
-URxvt.background: [62]#000000
-URxvt*scrollBar:                      false
-URxvt*mouseWheelScrollPage:           false
-URxvt*cursorBlink:                    true
-URxvt*background:                     black
-URxvt*foreground:                     white
-URxvt*saveLines:                      5000
+! URxvt.font:                             xft:Inconsolata:bold:size=14
+Xft.dpi:                                96
+Xft.antialias:                          true
+Xft.hinting:                            true
+Xft.rgba:                               rgb
+Xft.autohint:                           false
+Xft.hintstyle:                          hintslight
+Xft.lcdfilter:                          lcddefault
+Xcursor.theme:                          Chameleon-Pearl-Regular-0.5
+Xcursor.size:                           0
+URxvt*font:                             xft:Inconsolata for Powerline:pixelsize=18
+URxvt.depth:                            32
+URxvt.background:                       [62]#000000
+URxvt*scrollBar:                        false
+URxvt*mouseWheelScrollPage:             false
+URxvt*cursorBlink:                      true
+URxvt*background:                       black
+URxvt*foreground:                       white
+URxvt*saveLines:                        5000
 
 ! for 'fake' transparency (without Compton) uncomment the following three lines
 ! URxvt*inheritPixmap:                  true
@@ -24,13 +24,12 @@ URxvt*saveLines:                      5000
 ! URxvt*shading:                        138
 
 ! other possible settings:
-!
-Rxvt.perl-ext-common:                   default,clipboard
+URxvt.perl-ext-common:                  default,clipboard
 URxvt.iso14755:                         false
-
-! URxvt.keysym.Shift-C-c:   perl:clipboard:copy
-! URxvt.keysym.Shift-C-v:   perl:clipboard:paste
-! URxvt.keysym.M-C-v: perl:clipboard:paste_escaped
+! URxvt.keysym.Shift-Alt-C:             perl:clipboard:copy
+! URxvt.keysym.Shift-Alt-V:             perl:clipboard:paste
+! URxvt.clipboard.copycmd:              xclip -in -selection clipboard
+! URxvt.clipboard.pastecmd:             xclip -out -selection clipboard
 ! URxvt*termName:                       string
 ! URxvt*geometry:                       geometry
 ! URxvt*chdir:                          string
@@ -128,6 +127,7 @@ URxvt.iso14755:                         false
 ! URxvt*perl-eval:                      perl-eval
 ! URxvt*perl-ext-common:                string
 ! URxvt*perl-ext:                       string
+! URxvt*iso14755:                       boolean
 ! URxvt*iso14755_52:                    boolean
 ! URxvt*xrm:                            string
 ! URxvt*keysym.sym:                     keysym
