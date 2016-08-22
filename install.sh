@@ -7,11 +7,13 @@ for i in *; do
 	if [[ -f ~/.$i || -d ~/.$i ]]; then
 		cp -a ~/.$i $dir/old.$timestamp/$i
 
-		echo "~/.$i already exists, overwrite? [y/n] "
-		read yn
-		if [[ $yn == "y" ]]; then
-			ln -sf $dir/$i ~/.$i
-		fi
+		# echo "~/.$i already exists, overwrite? [y/n] "
+		# read yn
+		# if [[ $yn == "y" ]]; then
+		# 	ln -sf $dir/$i ~/.$i
+		# fi
+
+		ln -sf $dir/$i ~/.$i
 	else
 		ln -sf $dir/$i ~/.$i
 	fi
