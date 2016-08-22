@@ -133,9 +133,6 @@ bindsym $mod+6 workspace 6
 bindsym $mod+7 workspace 7
 bindsym $mod+8 workspace 8
 
-#navigate workspaces next / previous
-bindsym $mod+Ctrl+Right workspace next
-bindsym $mod+Ctrl+Left workspace prev
 
 # Move focused container to workspace
 bindsym $mod+Ctrl+1 move container to workspace number 1
@@ -160,6 +157,10 @@ bindsym $mod+Shift+8 move container to workspace number 8; workspace 8
 # Move workspace to monitor left or right
 bindsym $mod+Ctrl+h move workspace to output left
 bindsym $mod+Ctrl+l move workspace to output right
+
+#navigate workspaces next / previous
+bindsym $mod+Ctrl+Right move workspace to output left
+bindsym $mod+Ctrl+Left move workspace to output right
 
 # Open applications on specific workspaces
 # assign [class="Thunderbird"] 1
