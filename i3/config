@@ -297,7 +297,7 @@ exec --no-startup-id thunderbird
 assign [class="Thunderbird"] $ws8
 
 exec --no-startup-id firefox
-assign [class="Firefox"] $ws8
+assign [class="Firefox"] $ws2
 
 
 # Theme colors
