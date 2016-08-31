@@ -117,15 +117,38 @@ bindsym $mod+Shift+s sticky toggle
 # focus the parent container
 bindsym $mod+a focus parent
 
-# Workspace names
-set $ws1 1
+# Workspace names and assignment
+set $ws1 1: Main
+
 set $ws2 2: Firefox
-set $ws3 3
-set $ws4 4
-set $ws5 5
-set $ws6 6
-set $ws7 7
+    assign [class="Firefox"] $ws2
+
+set $ws3 3: Doc
+    assign [class="Okular"] $ws3
+    assign [class="Evince"] $ws3
+
+set $ws4 4: CAD
+    assign [class="Freecad"] $ws4
+    assign [class="Kicad"] $ws4
+
+set $ws5 5: Chat
+    assign [class="Telegram"] $ws5
+    assign [class="telegram-desktop"] $ws5
+    assign [class="Skype"] $ws5
+
+set $ws6 6: VM
+    assign [class="Virt-manager"] $ws6
+
+set $ws7 7: Extra
+
 set $ws8 8: Mail
+    assign [class="Thunderbird"] $ws8
+
+# screen applications always used
+exec --no-startup-id telegram
+exec --no-startup-id thunderbird
+exec --no-startup-id firefox
+
 
 # switch to workspace
 bindsym $mod+1 workspace $ws1
@@ -291,13 +314,6 @@ exec --no-startup-id xautolock -time 10 -locker blurlock
 exec --no-startup-id owncloud
 # exec --no-startup-id redshift
 exec --no-startup-id blueman-applet
-exec --no-startup-id telegram
-
-exec --no-startup-id thunderbird
-assign [class="Thunderbird"] $ws8
-
-exec --no-startup-id firefox
-assign [class="Firefox"] $ws2
 
 
 # Theme colors
