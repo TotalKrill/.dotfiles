@@ -112,6 +112,6 @@ function rb {
 alias morph='ssh control@192.168.1.242'
 source ~/cloudy/scripts/alias.sh
 
-
+alias steam='STEAM_RUNTIME=0 steam'
 
 

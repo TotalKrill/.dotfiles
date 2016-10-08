@@ -137,6 +137,7 @@ set $ws5 5: Chat
     assign [class="Telegram"] $ws5
     assign [class="telegram-desktop"] $ws5
     assign [class="Skype"] $ws5
+    assign [class="Hexchat"] $ws5
 
 set $ws6 6: VM
     assign [class="Virt-manager"] $ws6
@@ -311,7 +312,7 @@ exec_always --no-startup-id sbxkb
 exec --no-startup-id compton -b
 #exec --no-startup-id start_conky_grey
 exec --no-startup-id start_conky_green
-exec --no-startup-id xautolock -time 10 -locker blurlock
+exec --no-startup-id xautolock -time 10 -locker "systemctl suspend"
 # owncloud
 exec --no-startup-id owncloud
 # exec --no-startup-id redshift
