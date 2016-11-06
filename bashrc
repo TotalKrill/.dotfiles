@@ -119,6 +119,6 @@ alias PY3='sudo rm /usr/bin/python; sudo ln -s /usr/bin/python3 /usr/bin/python'
 
 source ~/cloudy/scripts/alias.sh
 
-
+alias steam='STEAM_RUNTIME=0 steam'
 
 

@@ -51,9 +51,12 @@ bindsym $mod+t exec --no-startup-id pkill compton
 bindsym $mod+Ctrl+t exec --no-startup-id compton -b
 bindsym $mod+Ctrl+m exec terminal -e 'alsamixer'
 bindsym $mod+Shift+d exec killall dunst && exec notify-send 'restart dunst'
-bindsym Print exec '~/twat/pscreen.sh'
-bindsym Shift+Print exec '~/twat/pscreen2.sh'
+# printscreen
+bindsym Print --release exec "notify-send 'selection will be saved to clipboard'; scrot -se 'xclip -selection clipboard -t image/png < $f && rm $f'"
+
 bindsym $mod+Ctrl+x exec xkill
+
+bindsym $mod+m exec terminal -e 'youtube-viewer --search \"tropical house\" --all -n -s'
 
 # volume controls for all sources in pulseaudio
 bindsym XF86AudioRaiseVolume exec "pactl list short sinks | sed 's/\t.*//' | xargs -L1 -i pactl set-sink-volume '{}' +5%"
@@ -135,6 +138,7 @@ set $ws5 5: Chat
     assign [class="Telegram"] $ws5
     assign [class="telegram-desktop"] $ws5
     assign [class="Skype"] $ws5
+    assign [class="Hexchat"] $ws5
 
 set $ws6 6: VM
     assign [class="Virt-manager"] $ws6
