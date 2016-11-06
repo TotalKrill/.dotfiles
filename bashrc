@@ -109,7 +109,14 @@ function rb {
    killall blueman-manager -9
    (blueman-applet &)
 }
+
 alias morph='ssh control@192.168.1.242'
+alias Mm='export ROS_MASTER_IR=http://morph:11311'
+alias Ml='export ROS_MASTER_IR=http://krille-pc:11311'
+
+alias PY2='sudo rm /usr/bin/python; sudo ln -s /usr/bin/python2 /usr/bin/python'
+alias PY3='sudo rm /usr/bin/python; sudo ln -s /usr/bin/python3 /usr/bin/python'
+
 source ~/cloudy/scripts/alias.sh
 
 
