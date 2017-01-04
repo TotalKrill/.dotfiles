@@ -23,8 +23,11 @@ bindsym $mod+n border normal
 # is used in the bar {} block below.
 font pango:Cantarell 9
 
+## Mouse
 # Use Mouse+$mod to drag floating windows
 floating_modifier $mod
+# toggle floatign with mid button
+bindsym --whole-window $mod+button2 floating toggle
 
 # start a terminal
 bindsym $mod+Return exec urxvt -cd "`xcwd`"
