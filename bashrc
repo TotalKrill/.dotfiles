@@ -20,6 +20,7 @@ export HISTFILESIZE=${HISTSIZE}
 export HISTCONTROL=ignoreboth
 export JAVA_FONTS=/usr/share/fonts/TTF
 export EDITOR=/usr/bin/nvim
+export ROS_OS_OVERRIDE="Manjaro Linux"
 
 alias ls='ls --group-directories-first --time-style=+"%d.%m.%Y %H:%M" --color=auto -F'
 alias ll='ls -lh --group-directories-first --time-style=+"%d.%m.%Y %H:%M" --color=auto -F'
@@ -110,9 +111,11 @@ function rb {
    (blueman-applet &)
 }
 
-alias morph='ssh control@192.168.1.242'
-alias Mm='export ROS_MASTER_IR=http://morph:11311'
-alias Ml='export ROS_MASTER_IR=http://krille-pc:11311'
+#alias morph='ssh control@192.168.1.242'
+alias morph='ssh control@12.0.1.100'
+alias Mm='export ROS_MASTER_URL=http://morph:11311'
+alias Mm='export ROS_MASTER_URL=http://12.0.1.100:11311'
+alias Ml='export ROS_MASTER_URL=http://krille-pc:11311'
 
 alias PY2='sudo rm /usr/bin/python; sudo ln -s /usr/bin/python2 /usr/bin/python'
 alias PY3='sudo rm /usr/bin/python; sudo ln -s /usr/bin/python3 /usr/bin/python'

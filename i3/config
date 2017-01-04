@@ -128,6 +128,7 @@ set $ws2 2: Firefox
 
 set $ws3 3: Doc
     assign [class="Okular"] $ws3
+    assign [class="okular"] $ws3
     assign [class="Evince"] $ws3
 
 set $ws4 4: CAD
