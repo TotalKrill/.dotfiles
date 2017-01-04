@@ -117,6 +117,12 @@ alias Ml='export ROS_MASTER_IR=http://krille-pc:11311'
 alias PY2='sudo rm /usr/bin/python; sudo ln -s /usr/bin/python2 /usr/bin/python'
 alias PY3='sudo rm /usr/bin/python; sudo ln -s /usr/bin/python3 /usr/bin/python'
 
+kicad_test() {
+PYTHONPATH=/usr/local/lib/python2.7/site-packages \
+LD_LIBRARY_PATH=/usr/local/bin:/tmp/kicad/usr/local/lib \
+/usr/local/bin/$1
+}
+
 source ~/cloudy/scripts/alias.sh
 
 alias steam='STEAM_RUNTIME=0 steam'
