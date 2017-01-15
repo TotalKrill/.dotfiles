@@ -1,3 +1,5 @@
 [user]
 	email = kristoffer.odmark90@gmail.com
-	name = totalkrill
+	name = Kristoffer Ödmark
+[pull]
+	rebase = true
