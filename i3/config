@@ -138,6 +138,7 @@ set $ws3 3: Doc
 set $ws4 4: CAD
     assign [class="Freecad"] $ws4
     assign [class="Kicad"] $ws4
+    assign [class="cura"] $ws4
 
 set $ws5 5: Chat
     assign [class="Telegram"] $ws5
