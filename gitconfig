@@ -3,3 +3,5 @@
 	name = Kristoffer Ödmark
 [pull]
 	rebase = true
+[alias]
+	tree = log --oneline --decorate --all --graph
