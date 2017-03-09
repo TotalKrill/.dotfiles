@@ -50,7 +50,7 @@ bindsym $mod+F3 exec pcmanfm
 bindsym $mod+F4 exec kicad
 
 bindsym $mod+Shift+F3 exec gksu pcmanfm
-bindsym $mod+t exec --no-startup-id pkill compton
+#bindsym $mod+t exec --no-startup-id pkill compton
 bindsym $mod+Ctrl+t exec --no-startup-id compton -b
 bindsym $mod+Ctrl+m exec terminal -e 'alsamixer'
 bindsym $mod+Shift+d exec killall dunst && exec notify-send 'restart dunst'
@@ -170,6 +170,9 @@ bindsym $mod+5 workspace $ws5
 bindsym $mod+6 workspace $ws6
 bindsym $mod+7 workspace $ws7
 bindsym $mod+8 workspace $ws8
+
+bindsym $mod+t scratchpad show
+bindsym $mod+Shift+t move scratchpad
 
 
 # Move focused container to workspace
