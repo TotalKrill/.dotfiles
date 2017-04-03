@@ -3,6 +3,8 @@ if [ -f /etc/bash_completion ]; then
 fi
 
 xhost +local:root > /dev/null 2>&1
+#store tty in temp
+echo $(tty) > /tmp/termtty
 
 complete -cf sudo
 
@@ -129,5 +131,5 @@ LD_LIBRARY_PATH=/usr/local/bin:/tmp/kicad/usr/local/lib \
 source ~/cloudy/scripts/alias.sh
 
 alias steam='STEAM_RUNTIME=0 steam'
-
+alias gdb-bmp='sh -c "urxvt &" && sleep 0.5 && arm-none-eabi-gdb -ex "target extended-remote /dev/ttyBmpGDB" -ex "dashboard -output $(cat /tmp/termtty)" -ex "monitor swdp_scan" -ex "attach 1"'
 
