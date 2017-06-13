@@ -133,3 +133,4 @@ source ~/cloudy/scripts/alias.sh
 alias steam='STEAM_RUNTIME=0 steam'
 alias gdb-bmp='sh -c "urxvt &" && sleep 0.5 && arm-none-eabi-gdb -ex "target extended-remote /dev/ttyBmpGDB" -ex "dashboard -output $(cat /tmp/termtty)" -ex "monitor swdp_scan" -ex "attach 1"'
 
+alias bmp-flash='arm-none-eabi-gdb -ex "target extended-remote /dev/ttyBmpGDB" -ex "monitor swdp_scan" -ex "attach 1" -ex "load" -ex "quit"'
