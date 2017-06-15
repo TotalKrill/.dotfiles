@@ -4,4 +4,7 @@
 [pull]
 	rebase = true
 [alias]
-	tree = log --oneline --decorate --all --graph
+    tree = log --oneline --decorate --all --graph
+
+[url "git+ssh://kristoffer-odmark@git.launchpad.net/"]
+        insteadof = lp:
