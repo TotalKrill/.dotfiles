@@ -127,8 +127,11 @@ bindsym $mod+a focus parent
 # Workspace names and assignment
 set $ws1 1: Main
 
-set $ws2 2: Firefox
+set $ws2 2: Browser
     assign [class="Firefox"] $ws2
+    assign [class="Vivaldi"] $ws2
+    assign [class="Opera"] $ws2
+    assign [class="Chrome"] $ws2
 
 set $ws3 3: Doc
     assign [class="Okular"] $ws3
