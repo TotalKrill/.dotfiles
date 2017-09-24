@@ -161,7 +161,8 @@ set $ws8 8: Mail
 # screen applications always used
 exec --no-startup-id telegram
 exec --no-startup-id thunderbird
-exec --no-startup-id opera
+#exec --no-startup-id opera
+exec --no-startup-id firefox
 
 
 # switch to workspace
