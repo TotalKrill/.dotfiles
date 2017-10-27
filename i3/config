@@ -132,6 +132,7 @@ set $ws2 2: Browser
     assign [class="Vivaldi"] $ws2
     assign [class="Opera"] $ws2
     assign [class="Chrome"] $ws2
+    assign [class="Chromium"] $ws2
 
 set $ws3 3: Doc
     assign [class="Okular"] $ws3
