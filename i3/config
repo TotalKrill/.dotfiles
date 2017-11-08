@@ -327,7 +327,11 @@ exec_always --no-startup-id sbxkb
 exec --no-startup-id compton -b
 #exec --no-startup-id start_conky_grey
 exec --no-startup-id start_conky_green
-exec --no-startup-id xautolock -time 10 -locker '~/.dotfiles/fuzzy_locky.sh' -detectsleep
+
+#lock and turnoff screen after 5 minutes
+exec --no-startup-id xautolock -time 5 -locker '~/.dotfiles/fuzzy_locky.sh'
+#suspend after 2.5 hours
+exec --no-startup-id xautolock -time 150 -locker 'systemctl suspend'
 # owncloud
 exec --no-startup-id owncloud
 # exec --no-startup-id redshift
