@@ -331,7 +331,7 @@ exec --no-startup-id start_conky_green
 #lock and turnoff screen after 5 minutes
 exec --no-startup-id xautolock -time 5 -locker '~/.dotfiles/fuzzy_locky.sh'
 #suspend after 2.5 hours
-exec --no-startup-id xautolock -time 150 -locker 'systemctl suspend'
+#exec --no-startup-id xautolock -time 150 -locker 'systemctl suspend'
 # owncloud
 exec --no-startup-id owncloud
 # exec --no-startup-id redshift
