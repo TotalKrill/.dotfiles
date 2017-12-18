@@ -1,0 +1,44 @@
+#!/bin/bash
+
+# setting up new mode for my VGA
+#xrandr --newmode "2560x1440" 148.5 1920 2008 2052 2200 1080 1089 1095 1125 +hsync +vsync
+#xrandr --addmode DP1 2560x1440
+
+# default monitor is eDP1
+BUILTIN_MONITOR=eDP1
+
+# functions to switch from eDP1 to DP1 and vice versa
+function ActivateDP {
+    echo "Switching to DP1"
+    xrandr --output DP1 --mode 2560x1440 --dpi 160 --output eDP1 --off
+    BUILTIN_MONITOR=DP1
+}
+function DeactivateDP {
+    echo "Switching to "
+    xrandr --output DP1 --off --output eDP1 --auto
+    BUILTIN_MONITOR=eDP1
+}
+
+# functions to check if DP is connected and in use
+function DPActive {
+    [ $BUILTIN_MONITOR = "DP1" ]
+}
+function DPConnected {
+    ! xrandr | grep "^DP1" | grep disconnected
+}
+
+# actual script
+while true
+do
+    if ! DPActive && DPConnected
+    then
+        ActivateDP
+    fi
+
+    if DPActive && ! DPConnected
+    then
+        DeactivateDP
+    fi
+
+    sleep 1s
+done
