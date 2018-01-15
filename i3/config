@@ -404,4 +404,7 @@ mode "$mode_gaps_outer" {
         bindsym Escape mode "default"
 }
 
+#load run-device local scripts
+exec ~/.local-startup.sh
+
 
