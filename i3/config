@@ -405,6 +405,6 @@ mode "$mode_gaps_outer" {
 }
 
 #load run-device local scripts
-exec ~/.local-startup.sh
+exec_always ~/.local-startup.sh
 
 
