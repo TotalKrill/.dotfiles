@@ -1,0 +1,22 @@
+- defaults:
+    link:
+      create: true
+      relink: true
+
+#- clean: ['~', '~/.config']
+
+- link:
+    ~/.i3:
+    ~/.ssh:
+    ~/.gitconfig:
+    ~/.gdbinit:
+    ~/.i3status.conf:
+    ~/.profile:
+    ~/.Xmodmap:
+    ~/.Xresources:
+
+- shell:
+  # the following have to run after linking ~/.gitconfig
+  - git update-submodules
+  - >
+    git cleanall -f
