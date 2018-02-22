@@ -7,7 +7,8 @@
 
 - link:
     ~/.i3:
-    ~/.ssh:
+    ~/.config/nvim: nvim
+    ~/.ssh/config: ssh/config
     ~/.gitconfig:
     ~/.gdbinit:
     ~/.i3status.conf:
@@ -16,7 +17,4 @@
     ~/.Xresources:
 
 - shell:
-  # the following have to run after linking ~/.gitconfig
-  - git update-submodules
-  - >
-    git cleanall -f
+    - [sh ./nvim/update.sh ,Running neovim plugin setup]
