@@ -334,7 +334,7 @@ exec --no-startup-id start_conky_green
 exec --no-startup-id xautolock -time 30 -locker 'systemctl suspend'
 exec_always "setxkbmap -layout \"se(nodeadkeys),us\" -option grp:win_space_toggle"
 # owncloud
-exec --no-startup-id owncloud
+#exec --no-startup-id owncloud
 # exec --no-startup-id redshift
 exec --no-startup-id blueman-applet
 
