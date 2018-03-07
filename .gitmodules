@@ -3,4 +3,5 @@
 	url = https://github.com/anishathalye/dotbot
 [submodule "nvim"]
 	path = nvim
-	url = git@github.com:TotalKrill/nvim.git
+  url = git@github.com:TotalKrill/nvim.git
+  branch = master
