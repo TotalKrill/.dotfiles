@@ -1399,7 +1399,7 @@ set python print-stack full
 
 # Start ------------------------------------------------------------------------
 
-python Dashboard.start()
+#python Dashboard.start()
 
 # ------------------------------------------------------------------------------
 # Copyright (c) 2015-2017 Andrea Cardaci <cyrus.and@gmail.com>
