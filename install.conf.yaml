@@ -2,11 +2,13 @@
     link:
       create: true
       relink: true
+      force: true
 
 #- clean: ['~', '~/.config']
 
 - link:
     ~/.i3:
+    ~/.bashrc:
     ~/.config/nvim: nvim
     ~/.ssh/config: ssh/config
     ~/.gitconfig:
