@@ -8,7 +8,7 @@ Xft.hintstyle:                          hintslight
 Xft.lcdfilter:                          lcddefault
 Xcursor.theme:                          Chameleon-Pearl-Regular-0.5
 Xcursor.size:                           0
-URxvt*font:                             xft:Inconsolata for Powerline:pixelsize=18
+URxvt*font:                             xft:Inconsolata\ for\ Powerline:pixelsize=18
 URxvt.depth:                            32
 URxvt.background:                       [62]#000000
 URxvt*scrollBar:                        false
