@@ -158,6 +158,7 @@ set $ws7 7: Extra
 
 set $ws8 8: Mail
     assign [class="Thunderbird"] $ws8
+    assign [class="Evolution"] $ws8
 
 # screen applications always used
 exec --no-startup-id telegram
