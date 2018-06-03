@@ -9,6 +9,7 @@ set $mod Mod1
 
 # Configure border style <normal|1pixel|pixel xx|none|pixel>
 new_window pixel 2
+for_window [class=".*"] border pixel 2
 new_float normal
 
 # Hide borders
