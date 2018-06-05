@@ -1222,7 +1222,7 @@ location, if available. Optionally list the frame arguments and locals too."""
         return {
             'limit': {
                 'doc': 'Maximum number of displayed frames (0 means no limit).',
-                'default': 2,
+                'default': 5,
                 'type': int,
                 'check': check_ge_zero
             },
