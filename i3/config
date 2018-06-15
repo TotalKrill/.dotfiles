@@ -149,6 +149,8 @@ set $ws4 4: CAD
 set $ws5 5: Chat
     assign [class="Telegram"] $ws5
     assign [class="discord"] $ws5
+    assign [class="ripcord"] $ws5
+    assign [class="Ripcord"] $ws5
     assign [class="telegram-desktop"] $ws5
     assign [class="Skype"] $ws5
     assign [class="Hexchat"] $ws5
