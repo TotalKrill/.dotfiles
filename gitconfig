@@ -19,3 +19,5 @@
 
 [url "git+ssh://kristoffer-odmark@git.launchpad.net/"]
         insteadof = lp:
+[merge]
+  ff = false

@@ -470,7 +470,7 @@ class Dashboard(gdb.Command):
                     modules.append(obj)
             except TypeError:
                 continue
-        modules = [ Variables, Source, Stack, Registers, Threads, Expressions]
+        modules = [ Variables, Source, Registers, Threads, Expressions]
         # sort modules alphabetically
         modules.sort(key=lambda x: x.__name__)
         return modules
