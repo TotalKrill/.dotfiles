@@ -1631,8 +1631,16 @@ set python print-stack full
 
 set confirm off
 # Start ------------------------------------------------------------------------
+define rl
+make clean
+make -j9
+load
+monitor reset 0
+monitor reset
+c
+end
 
-python Dashboard.start()
+#python Dashboard.start()
 
 # ------------------------------------------------------------------------------
 # Copyright (c) 2015-2017 Andrea Cardaci <cyrus.and@gmail.com>
