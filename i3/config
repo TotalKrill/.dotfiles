@@ -31,8 +31,7 @@ floating_modifier $mod
 bindsym --whole-window $mod+button2 floating toggle
 
 # start a terminal
-bindsym $mod+Return exec urxvt -cd "`xcwd`"
-bindsym $mod+Shift+Return exec urxvt
+bindsym $mod+Return exec alacritty --working-directory "`xcwd`"
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -41,8 +40,8 @@ bindsym $mod+Shift+q kill
 bindsym $mod+d exec --no-startup-id dmenu_recency
 
 # Screen brightness controls
-bindsym $mod+F6 exec xbacklight -inc 5
-bindsym $mod+F5 exec xbacklight -dec 5
+bindsym $mod+F6 exec xbacklight -inc 1
+bindsym $mod+F5 exec xbacklight -dec 1
 
 # Start Applications
 # bindsym $mod+F1 exec thunderbird
