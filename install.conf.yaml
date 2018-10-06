@@ -8,6 +8,7 @@
 
 - link:
     ~/.i3:
+    ~/.config/alacritty/alacritty.yaml: alacritty.yaml
     ~/.bashrc:
     ~/.config/nvim: nvim
     ~/.ssh/config: ssh/config
