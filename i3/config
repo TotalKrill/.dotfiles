@@ -331,6 +331,8 @@ exec --no-startup-id clipit
 exec --no-startup-id blueman
 exec_always --no-startup-id sbxkb
 exec --no-startup-id compton -b
+exec --no-startup-id redshift-gtk
+exec --no-startup-id ibus-daemon
 #exec --no-startup-id start_conky_grey
 exec --no-startup-id start_conky_green
 
