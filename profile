@@ -4,6 +4,6 @@ export GTK2_RC_FILES="$HOME/.gtkrc-2.0"
 
 # fix "xdg-open fork-bomb" export your preferred browser from here
 export BROWSER=/usr/bin/chromium
-#export PATH=~/.npm-global/bin:$PATH
+export PATH=/homer/krille/.cargo/bin:$PATH
 
 autorandr -c
