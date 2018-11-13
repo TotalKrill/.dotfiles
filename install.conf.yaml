@@ -7,7 +7,7 @@
 #- clean: ['~', '~/.config']
 
 - link:
-    ~/.i3:
+    ~/.config/i3/config: i3/config
     ~/.config/alacritty:
     ~/.bashrc:
     ~/.config/nvim: nvim
