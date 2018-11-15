@@ -9,6 +9,7 @@
 - link:
     ~/.config/i3/config: i3/config
     ~/.config/alacritty:
+    ~/.config/xfce4/xfconf/xfce-perchannel-xml: xfce4
     ~/.bashrc:
     ~/.config/nvim: nvim
     ~/.ssh/config: ssh/config
