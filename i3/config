@@ -312,10 +312,10 @@ bar {
 		separator #2ECC71
 		background #333333
 		statusline #DDDDDD
-		focused_workspace #FFFFFF #2ECC71 #000000
+		focused_workspace #FFFFFF #CC7832 #000000
 		active_workspace #000000 #A4A28D #FFFFFF
 		inactive_workspace #A4A28D #000000 #DDDDDD
-		urgent_workspace #2ECC71 #900000 #FFFFFF
+		urgent_workspace #CC7932 #900000 #FFFFFF
 	}
 }
 
@@ -347,9 +347,10 @@ exec --no-startup-id blueman-applet
 
 
 # Theme colors
-client.focused #2ECC71 #2ECC71 #000000 #FFFFFF
+#client.focused #CC7832 #2ECC71 #000000 #FFFFFF
+client.focused #CC7832 #CC7832 #000000 #FFFFFF
 client.unfocused #222222 #222222 #2ECC71 #222222
-client.urgent #274D01 #900000 #FFFFFF #900000
+client.urgent #CC7832 #900000 #FFFFFF #900000
 
 #############################
 ### settings for i3-gaps: ###
