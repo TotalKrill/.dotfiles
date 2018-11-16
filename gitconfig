@@ -12,6 +12,8 @@
     last = log -1 HEAD
     visual = !gitk
     ca = commit -am
+    cloner = clone --recursive
+    puller = pull --recurse-submodules
 [push]
     default = simple
 [core]
