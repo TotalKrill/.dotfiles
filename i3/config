@@ -33,6 +33,9 @@ bindsym --whole-window $mod+button2 floating toggle
 # start a terminal
 bindsym $mod+Return exec alacritty --working-directory "`xcwd`"
 
+# play sound
+bindsym $mod+Shift+f exec aplay ~/.dotfiles/personal-scripts/fuckit.wav
+
 # kill focused window
 bindsym $mod+Shift+q kill
 
