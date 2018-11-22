@@ -49,7 +49,7 @@ bindsym $mod+F5 exec xbacklight -dec 1
 # Start Applications
 # bindsym $mod+F1 exec thunderbird
 bindsym $mod+F1 exec evolution
-bindsym $mod+F2 exec chromium
+#bindsym $mod+F2 exec chromium
 bindsym $mod+F3 exec pcmanfm
 bindsym $mod+F4 exec kicad
 
@@ -167,10 +167,11 @@ set $ws8 8: Mail
     assign [class="Evolution"] $ws8
 
 # screen applications always used
-exec --no-startup-id telegram
+#exec --no-startup-id telegram
 #exec --no-startup-id thunderbird
 #exec --no-startup-id evolution
-exec --no-startup-id chromium
+#exec --no-startup-id chromium
+#exec --no-startup-id firefox
 
 
 # switch to workspace
