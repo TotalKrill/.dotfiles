@@ -328,7 +328,7 @@ exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 exec --no-startup-id nitrogen --restore
 exec --no-startup-id nm-applet
 exec --no-startup-id kdeconnect-indicator
-exec --no-startup-id pa-applet
+exec --no-startup-id pasystray
 exec --no-startup-id xfce4-power-manager
 exec --no-startup-id pamac-tray
 exec --no-startup-id clipit
@@ -338,19 +338,14 @@ exec --no-startup-id redshift-gtk
 exec --no-startup-id ibus-daemon
 #exec --no-startup-id start_conky_grey
 exec --no-startup-id start_conky_green
+exec --no-startup-id blueman-applet
 
 #lock and turnoff screen after 5 minutes
 #exec --no-startup-id xautolock -time 5 -locker '~/.dotfiles/fuzzy_locky.sh'
 #suspend after 2.5 hours
 #exec --no-startup-id xautolock -time 30 -locker 'systemctl suspend'
 exec_always "setxkbmap -layout \"se(nodeadkeys),us\" -option grp:win_space_toggle"
-
 exec_always "xset r rate 250 60"
-# owncloud
-#exec --no-startup-id owncloud
-# exec --no-startup-id redshift
-exec --no-startup-id blueman-applet
-
 
 # Theme colors
 #client.focused #CC7832 #2ECC71 #000000 #FFFFFF
