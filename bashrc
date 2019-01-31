@@ -126,3 +126,5 @@ LD_LIBRARY_PATH=/usr/local/bin:/tmp/kicad/usr/local/lib \
 alias steam='STEAM_RUNTIME=0 steam'
 
 exec fish
+
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
