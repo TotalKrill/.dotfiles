@@ -328,7 +328,6 @@ bar {
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 exec --no-startup-id nitrogen --restore
 exec --no-startup-id nm-applet
-exec --no-startup-id kdeconnect-indicator
 exec --no-startup-id pasystray
 exec --no-startup-id xfce4-power-manager
 exec --no-startup-id pamac-tray
@@ -348,6 +347,7 @@ exec --no-startup-id syncthing
 #exec --no-startup-id xautolock -time 30 -locker 'systemctl suspend'
 exec_always "setxkbmap -layout \"se(nodeadkeys),us\" -option grp:win_space_toggle"
 exec_always "xset r rate 250 60"
+exec_always --no-startup-id dunst
 
 # Theme colors
 #client.focused #CC7832 #2ECC71 #000000 #FFFFFF
