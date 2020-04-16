@@ -59,9 +59,9 @@ bindsym $mod+Ctrl+t exec --no-startup-id compton -b
 bindsym $mod+Ctrl+m exec terminal -e 'alsamixer'
 bindsym $mod+Shift+d exec killall dunst && exec notify-send 'restart dunst'
 # printscreen
-bindsym Print --release exec "notify-send 'selection will be saved to clipboard'; scrot -se 'xclip -selection clipboard -t image/png < $f && rm $f'"
+bindsym Print --release exec "notify-send 'selection will be saved to clipboard'; maim -us | xclip -selection clipboard -t image/png"
+bindsym $mod+p --release exec "notify-send 'selection will be saved to clipboard'; maim -us | xclip -selection clipboard -t image/png"
 
-bindsym $mod+p --release exec "notify-send 'selection will be saved to clipboard'; scrot -se 'xclip -selection clipboard -t image/png < $f && rm $f'"
 bindsym $mod+Ctrl+x exec xkill
 
 bindsym $mod+m exec terminal -e 'youtube-viewer --search \"tropical house\" --all -n -s'
