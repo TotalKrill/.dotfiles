@@ -64,8 +64,6 @@ bindsym $mod+p --release exec "notify-send 'selection will be saved to clipboard
 
 bindsym $mod+Ctrl+x exec xkill
 
-bindsym $mod+m exec terminal -e 'youtube-viewer --search \"tropical house\" --all -n -s'
-
 # volume controls for all sources in pulseaudio
 bindsym XF86AudioRaiseVolume exec "pactl list short sinks | sed 's/\t.*//' | xargs -L1 -i pactl set-sink-volume '{}' +5%"
 bindsym XF86AudioLowerVolume exec "pactl list short sinks | sed 's/\t.*//' | xargs -L1 -i pactl set-sink-volume '{}' -5%"
