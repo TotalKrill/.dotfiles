@@ -1,4 +1,5 @@
 AddKeysToAgent yes
 
 Host *
-    StrictHostKeyChecking no
+   IdentityFile ~/.ssh/id_rsa
+   StrictHostKeyChecking no

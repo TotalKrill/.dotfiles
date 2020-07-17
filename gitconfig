@@ -23,3 +23,5 @@
         insteadof = lp:
 [merge]
   ff = false
+[color]
+	ui = auto
