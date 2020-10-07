@@ -25,3 +25,5 @@
   ff = false
 [color]
 	ui = auto
+[submodule]
+	recurse = true
