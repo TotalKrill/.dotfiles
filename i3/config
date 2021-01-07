@@ -348,6 +348,7 @@ exec --no-startup-id syncthing
 exec_always "setxkbmap -layout \"se(nodeadkeys),us\" -option grp:win_space_toggle"
 exec_always "xset r rate 250 60"
 exec_always --no-startup-id dunst
+exec_always --no-startup-id clipclean
 
 # Theme colors
 #client.focused #CC7832 #2ECC71 #000000 #FFFFFF
