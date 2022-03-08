@@ -4,4 +4,4 @@ script might be added to restore them.
 
 ## Prerequisites
 
-neovim python2-neovim python-neovim clang fish rxvt-unicode-patched cmake
+neovim python2-neovim python-neovim clang fish cmake
