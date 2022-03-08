@@ -10,6 +10,7 @@
     ~/.config/i3/config: i3/config
     ~/.config/i3blocks/config: i3/i3blocksconfig
     ~/.config/alacritty:
+    ~/.config/helix: 
     ~/.bashrc:
     ~/.config/nvim: nvim
     ~/.ssh/config: ssh/config
