@@ -125,6 +125,19 @@ LD_LIBRARY_PATH=/usr/local/bin:/tmp/kicad/usr/local/lib \
 
 alias steam='STEAM_RUNTIME=0 steam'
 
+
+MQTT_NAME="${RANDOM}${USER}"
+MQTT_PERMISSIONS="{\"superadmin\": false, \"id\": \"$MQTT_NAME\", \"topics\": { \"pubs\": [ \"#\" ], \"subs\": [ \"#\" ] } }"
+
+MQTT_TOKEN=$(curl -f -X 'POST' \
+                'http://192.168.0.2:8080/jwt/mqtt?duration=28800' \
+                -H 'accept: text/plain' \
+                -m 1 \
+                -H 'Content-Type: application/json' \
+                -d "$MQTT_PERMISSIONS")
+
+export MQTT_TOKEN
+export MQTT_NAME
 exec fish
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
