@@ -1,7 +1,15 @@
 theme = "gruvbox"
 
+[editor]
+cursorline = true
+
 [editor.cursor-shape]
 normal = "block"
 insert = "bar"
 select = "underline"
+
+[editor.indent-guides]
+render = true
+
+
 
