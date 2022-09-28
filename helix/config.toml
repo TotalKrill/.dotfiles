@@ -3,6 +3,9 @@ theme = "gruvbox"
 [editor]
 cursorline = true
 
+[editor.lsp]
+display-messages = true
+
 [editor.cursor-shape]
 normal = "block"
 insert = "bar"
