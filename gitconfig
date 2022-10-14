@@ -16,6 +16,7 @@
     puller = pull --recurse-submodules
 [push]
     default = simple
+	autoSetupRemote = true
 [core]
     editor = nvim
 
@@ -23,6 +24,7 @@
         insteadof = lp:
 [merge]
   ff = false
+	tool = kdiff3
 [color]
 	ui = auto
 [submodule]
