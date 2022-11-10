@@ -8,9 +8,9 @@ set $mod Mod4
 # workspace_layout tabbed <stacking|tabbed>
 
 # Configure border style <normal|1pixel|pixel xx|none|pixel>
-new_window pixel 2
+default_border pixel 2
 for_window [class=".*"] border pixel 2
-new_float normal
+default_floating_border normal
 
 # Hide borders
 #hide_edge_borders none
@@ -59,7 +59,7 @@ bindsym $mod+Ctrl+t exec --no-startup-id compton -b
 bindsym $mod+Ctrl+m exec terminal -e 'alsamixer'
 bindsym $mod+Shift+d exec killall dunst && exec notify-send 'restart dunst'
 # printscreen
-bindsym Print --release exec "notify-send 'selection will be saved to clipboard'; maim -us | xclip -selection clipboard -t image/png"
+# bindsym Print --release exec "notify-send 'selection will be saved to clipboard'; maim -us | xclip -selection clipboard -t image/png"
 bindsym $mod+p --release exec "notify-send 'selection will be saved to clipboard'; maim -us | xclip -selection clipboard -t image/png"
 
 bindsym $mod+Ctrl+x exec xkill
@@ -327,7 +327,7 @@ bar {
 # Autostart applications
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 exec --no-startup-id nitrogen --restore
-exec --no-startup-id nm-applet
+exec --no-startup-id nm-applet --indicator
 exec --no-startup-id pasystray
 exec --no-startup-id xfce4-power-manager
 exec --no-startup-id pamac-tray

@@ -143,3 +143,4 @@ exec fish
 alias doco='docker-compose -f artifacts/docker-compose.yaml'
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
+. "$HOME/.cargo/env"
