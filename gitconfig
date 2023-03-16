@@ -29,3 +29,5 @@
 	ui = auto
 [submodule]
 	recurse = true
+[safe]
+	directory = /opt/flutter
