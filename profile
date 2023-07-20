@@ -8,4 +8,4 @@ export PATH=~/.cargo/bin:$PATH
 
 autorandr -c
 
-export PATH="/home/krille/.local/share/solana/install/active_release/bin:$PATH"
+. "$HOME/.cargo/env"

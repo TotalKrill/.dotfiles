@@ -86,26 +86,6 @@ bind "set menu-complete-display-prefix on"
 
 LS_COLORS=$LS_COLORS:'di=0,35:'; export LS_COLORS
 
-function dual_wield {
-    ~/.screenlayout/default.sh
-}
-
-function single {
-    ~/.screenlayout/single.sh
-}
-
-function demotime {
-    cd ~/localizationws
-    source devel/setup.bash
-    roslaunch all.launch
-}
-
-alias vim='nvim'
-function rs {
-    source devel/setup.bash
-    export ROS_OS_OVERRIDE=arch:$(uname -r)
-    export ROS_HOSTNAME=krille-pc
-}
 function rb {
    killall blueman-applet -9
    killall blueman-manager -9
@@ -113,17 +93,9 @@ function rb {
    (blueman-applet &)
 }
 
-alias PY2='sudo rm /usr/bin/python; sudo ln -s /usr/bin/python2 /usr/bin/python'
-alias PY3='sudo rm /usr/bin/python; sudo ln -s /usr/bin/python3 /usr/bin/python'
-
-kicad_test() {
-PYTHONPATH=/usr/local/lib/python2.7/site-packages \
-LD_LIBRARY_PATH=/usr/local/bin:/tmp/kicad/usr/local/lib \
-/usr/local/bin/$1
-}
-
-
 alias steam='STEAM_RUNTIME=0 steam'
+
+export PATH="$HOME/.cargo/bin:$PATH"
 
 exec fish
 
