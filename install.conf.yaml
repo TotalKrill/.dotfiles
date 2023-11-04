@@ -12,7 +12,9 @@
     ~/.config/alacritty:
     ~/.config/helix: 
     ~/.config/waybar: 
+    ~/.config/wofi: 
     ~/.config/hypr: 
+    ~/.config/flameshot: 
     ~/.bashrc:
     ~/.ssh/config: ssh/config
     ~/.gitconfig:
