@@ -18,7 +18,7 @@
     default = simple
 	autoSetupRemote = true
 [core]
-    editor = nvim
+	editor = hx
 
 [url "git+ssh://kristoffer-odmark@git.launchpad.net/"]
         insteadof = lp:
@@ -31,3 +31,8 @@
 	recurse = true
 [safe]
 	directory = /opt/flutter
+[filter "lfs"]
+	process = git-lfs filter-process
+	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f

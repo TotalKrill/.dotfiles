@@ -20,8 +20,7 @@ shopt -s hostcomplete
 export HISTSIZE=10000
 export HISTFILESIZE=${HISTSIZE}
 export HISTCONTROL=ignoreboth
-export JAVA_FONTS=/usr/share/fonts/TTF
-export EDITOR=/usr/bin/nvim
+export EDITOR=/usr/bin/hx
 
 alias ls='ls --group-directories-first --time-style=+"%d.%m.%Y %H:%M" --color=auto -F'
 alias ll='ls -lh --group-directories-first --time-style=+"%d.%m.%Y %H:%M" --color=auto -F'
@@ -86,12 +85,7 @@ bind "set menu-complete-display-prefix on"
 
 LS_COLORS=$LS_COLORS:'di=0,35:'; export LS_COLORS
 
-function rb {
-   killall blueman-applet -9
-   killall blueman-manager -9
-   sudo systemctl restart bluetooth.service
-   (blueman-applet &)
-}
+alias vim='nvim'
 
 alias steam='STEAM_RUNTIME=0 steam'
 
@@ -102,6 +96,7 @@ export PATH=$PATH:$ANDROID_SDK_ROOT/platform-tools/
 export PATH=$PATH:$ANDROID_SDK_ROOT/tools/bin/
 export PATH=$PATH:$ANDROID_ROOT/emulator
 export PATH=$PATH:$ANDROID_SDK_ROOT/tools/
+export CHROME_EXECUTABLE=google-chrome-stable
 
 exec fish
 
