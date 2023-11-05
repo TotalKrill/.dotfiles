@@ -13,6 +13,7 @@
     ~/.config/helix: 
     ~/.config/waybar: 
     ~/.config/wofi: 
+    ~/.config/mako: 
     ~/.config/hypr: 
     ~/.config/flameshot: 
     ~/.bashrc:
