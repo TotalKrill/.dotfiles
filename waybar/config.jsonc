@@ -13,6 +13,7 @@
   "spacing": 1,
   "gtk-layer-shell": true,
   "modules-left": [
+    "custom/applications",
     "custom/notification",
     "clock"
   ],
@@ -88,22 +89,33 @@
     "pulseaudio#microphone",
     "pulseaudio#audio",
     // "bluetooth",
-    "network"
+    "network",
     // "network#eno1"
     // "battery"
+    "custom/power"
   ],
+  "custom/power": {
+    "format":  " ⏻ ",
+    "on-click": "sleep 0.15 && sh ~/.config/waybar/wofi-power.sh",
+    "tooltip": false
+  },
+  "custom/applications": {
+    "format":  "  ☰ ",
+    "on-click": "sleep 0.15 && wofi --show drun",
+    "tooltip": false
+  },
   "tray": {
     "icon-size": 22,
     "spacing": 10
   },
   "cpu": {
     "format": "󰻠 {usage}%",
-    "on-click": "",
+    "on-click": "alacritty -T AlacrittyBtm -e btm",
     "tooltip": false
   },
   "memory": {
     "format": "󰍛 {used:0.1f}GB ({percentage}%) / {total:0.1f}GB",
-    "on-click": "",
+    "on-click": "alacritty -T AlacrittyBtm -e btm",
     "tooltip": false
   },
   "backlight": {
