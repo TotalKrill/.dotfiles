@@ -18,14 +18,33 @@
 
 * {
   font-family: Iosevka, Material Design Icons Desktop;
-  font-size: 18px;
+  font-size: 16px;
 }
 
 window#waybar {
-  background-color: @black-solid;
+  background-color: @transparent;
   color: @text;
-   border-radius: 15px; 
-   border: 1px solid @black; 
+  border-radius: 14px; 
+  border: 0px solid @black; 
+}
+
+.modules-left {
+  background-color: rgba(255,255,255,0.1);
+  border-radius: 15px; 
+  border: 1px solid @black; 
+  margin-left: 10px;
+}
+.modules-center {
+  background-color: rgba(255,255,255,0.1);
+    border-radius: 15px; 
+  border: 1px solid @black; 
+}
+.modules-right{
+  background-color: rgba(255,255,255,0.1);
+  border-radius: 15px; 
+  border: 1px solid @black; 
+  padding: 1px 8px;
+  margin-right: 10px;
 }
 
 tooltip {
@@ -160,7 +179,7 @@ tooltip label {
 }
 
 #submap {
-  border: 0;
+  border: 1;
 }
 
 /* -------------------------------------------------------------------------------- */
