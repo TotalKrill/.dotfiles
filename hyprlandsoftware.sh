@@ -9,4 +9,4 @@ sudo pacman -S pipewire wireplumber xdg-desktop-portal-hyprland qt5-wayland qt6-
 yay -S flameshot-git swayland-effects wlogout
 
 # tools
-sudo pacman -S waybar otf-font-awesome wofi bottom
+sudo pacman -S waybar otf-font-awesome wofi bottom grim
