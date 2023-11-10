@@ -15,6 +15,7 @@
     ~/.config/wofi: 
     ~/.config/mako: 
     ~/.config/hypr: 
+    ~/.config/swayidle: 
     ~/.config/flameshot: 
     ~/.bashrc:
     ~/.ssh/config: ssh/config
