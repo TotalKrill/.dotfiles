@@ -3,7 +3,7 @@
 # exec-once started
 sudo pacman -S mako  polkit-kde-agent hyprland
 # automatic
-sudo pacman -S pipewire wireplumber xdg-desktop-portal-hyprland qt5-wayland qt6-wayland wlroots wl-clipboard swayidle swaylock
+sudo pacman -S pipewire wireplumber xdg-desktop-portal-hyprland qt5-wayland qt6-wayland wlroots wl-clipboard swayidle swaylock jq
 
 # aur, 
 yay -S flameshot-git swayland-effects wlogout
