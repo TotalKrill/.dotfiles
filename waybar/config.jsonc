@@ -40,7 +40,8 @@
   "clock": {
     "interval": 1,
     // "format": "{:󰥔  %I:%M %p}",
-    "format": "{:󰣆   %A, %B %d | 󰥔  %H:%M %p}",
+    // "format": " {:󰣆   %A, %B %d | 󰥔  %H:%M %p}",
+    "format": "🕑 {:%R 📅 %Y/%m/%d}",
     // "on-click": "gnome-calendar",
     // "tooltip": true,
     // "tooltip-format": "{calendar}",
