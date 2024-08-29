@@ -3,13 +3,13 @@
   "layer": "top",
   // "output": [],
   "position": "top",
-  "height": 40,
+  "height": 30,
   // "width": 900,
   // "margin": "",
   "margin-top": 4,
   "margin-bottom": 0,
-  "margin-left": 4,
-  "margin-right": 4,
+  "margin-left": 2,
+  "margin-right": 2,
   "spacing": 1,
   "gtk-layer-shell": true,
   "modules-left": [
@@ -41,7 +41,7 @@
     "interval": 1,
     // "format": "{:󰥔  %I:%M %p}",
     // "format": " {:󰣆   %A, %B %d | 󰥔  %H:%M %p}",
-    "format": "🕑 {:%R 📅 %Y/%m/%d}",
+    "format": "🕑 {:%R   📅  %Y/%m/%d}",
     // "on-click": "gnome-calendar",
     // "tooltip": true,
     // "tooltip-format": "{calendar}",
@@ -96,18 +96,18 @@
     "custom/power"
   ],
   "custom/power": {
-    "format":  " ⏻ ",
+    "format": " ⏻ ",
     "on-click": "sleep 0.15 && sh ~/.config/waybar/wofi-power.sh",
     "tooltip": false
   },
   "custom/applications": {
-    "format":  "  ☰ ",
+    "format": "  ☰ ",
     "on-click": "sleep 0.15 && wofi --show drun",
     "tooltip": false
   },
   "tray": {
-    "icon-size": 22,
-    "spacing": 10
+    "icon-size": 20,
+    "spacing": 8
   },
   "cpu": {
     "format": "󰻠 {usage}%",
@@ -183,20 +183,6 @@
     "on-click": "nm-connection-editor",
     "tooltip": true,
     "tooltip-format": "󰢮 {ifname}\n󰩟 {ipaddr}/{cidr}\n{icon} {essid}\n󱑽 {signalStrength}% {signaldBm} dBm {frequency} MHz\n󰞒 {bandwidthDownBytes}\n󰞕 {bandwidthUpBytes}"
-  },
-  "network#eno1": {
-    "interval": 1,
-    "interface": "eno1",
-    "format-icons": [
-      "󰈀"
-    ],
-    "format-ethernet": "{icon}",
-    // "format-disconnected": "{icon}",
-    "format-disconnected": "",
-    // "format-alt": "{icon} | 󰢮 {ifname} | 󰩟 {ipaddr}/{cidr}",
-    "on-click": "",
-    "tooltip": true,
-    "tooltip-format": "󰢮 {ifname}\n󰩟 {ipaddr}/{cidr}\n󰞒 {bandwidthDownBytes}\n󰞕 {bandwidthUpBytes}"
   },
   "network#wlo1": {
     "interval": 1,
