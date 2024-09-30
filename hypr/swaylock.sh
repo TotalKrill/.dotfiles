@@ -1,3 +1,5 @@
+sudo systemctl start gitlab-runner
+
 swaylock \
   --screenshots \
   --clock \
