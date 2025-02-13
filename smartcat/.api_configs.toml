@@ -24,6 +24,7 @@ url = "https://api.mistral.ai/v1/chat/completions"
 default_model = "mistral-medium"
 
 [ollama]
-url = "http://localhost:11434/api/chat"
-default_model = "phi3"
+url = "http://10.42.10.8:11434/api/chat"
+# default_model = "deepseek-r1:14b"
+default_model = "qwen2.5-coder:14b"
 timeout_seconds = 180
