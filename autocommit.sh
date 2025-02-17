@@ -1,2 +1,2 @@
 #!sh
-git commit -am "`git diff | sc commit`"
+git commit -am "`git diff -- ':!*.lock' | sc commit`"

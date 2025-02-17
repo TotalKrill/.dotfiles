@@ -15,6 +15,7 @@
     cloner = clone --recursive
     puller = pull --recurse-submodules
 	ac = "!sh ~/.dotfiles/autocommit.sh"
+	d = "! sh -c \"git diff \"$@\" -- ':!*.lock'\""
 [push]
     default = simple
 	autoSetupRemote = true
