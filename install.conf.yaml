@@ -16,6 +16,7 @@
     ~/.config/wofi: 
     ~/.config/mako: 
     ~/.config/hypr: 
+    ~/.config/niri: 
     ~/.config/swayidle: 
     ~/.config/flameshot: 
     ~/.bashrc:

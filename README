@@ -1,7 +1,1 @@
-#Some config files i use
-
-script might be added to restore them.
-
-## Prerequisites
-
-neovim python2-neovim python-neovim clang fish cmake
+My personal configuration files
