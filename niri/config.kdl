@@ -2,7 +2,7 @@
 // "/-" comments out the following node.
 // Check the wiki for a full description of the configuration:
 // https://github.com/YaLTeR/niri/wiki/Configuration:-Overview
-//
+// 
 spawn-at-startup "waybar"
 spawn-at-startup "mako"
 spawn-at-startup "polkit-kde-agent"
@@ -108,6 +108,58 @@ input {
     // If the position is unset or results in an overlap, the output is instead placed
     // automatically.
     position x=1280 y=0
+}
+
+workspace "work" {
+    
+}
+
+workspace "chat" {
+    
+}
+
+window-rule {
+    match at-startup=true
+    match app-id=r#"^org\.telegram\.desktop$"#
+    match app-id=r#"Slack"#
+    match app-id=r#"Discord"#
+    open-on-workspace "chat"
+}
+
+workspace "browsers" {
+    
+}
+
+window-rule {
+    match at-startup=true
+    match app-id=r#"brave-browser"#
+    match app-id=r#"google-chrome"#
+    match app-id=r#"firefox"#
+    open-on-workspace "browsers"
+}
+
+
+workspace "cad" {
+    
+}
+
+// floating windows
+window-rule {
+    match at-startup=true
+    match app-id=r#"FreeCAD"# title=r#"(.*)(ocument)$"#
+    match app-id=r#"FreeCAD"# title=r#"(.*)(ile)$"#
+    match app-id="nemo"
+    default-window-height { proportion 0.66; }
+    default-column-width { proportion 0.5; }
+    open-floating true
+}
+
+window-rule {
+    match at-startup=true
+    match app-id=r#"BambuStudio"#
+    match app-id=r#"FreeCAD"#
+    match app-id=r#"Blender"#
+    open-on-workspace "cad"
 }
 
 // Settings that influence how windows are positioned and sized.
@@ -350,8 +402,33 @@ binds {
 
     // Suggested binds for running programs: terminal, app launcher, screen locker.
     Mod+Return{ spawn "alacritty"; }
+    Mod+E { spawn "nemo"; }
     Mod+D { spawn "fuzzel"; }
-    Super+Alt+L { spawn "swaylock"; }
+    // Mod+Alt+L { spawn "swaylock"; }
+    Mod+Alt+L { spawn "~/.config/hypr/swaylock.sh"; }
+    // Mod+Alt+L { spawn "swaylock" \
+    //     "--screenshots" \
+    //     "--clock" \
+    //     "--indicator" \
+    //     "--indicator-radius 100" \
+    //     "--indicator-thickness 7" \
+    //     "--effect-blur 7x5" \
+    //     "--effect-vignette 0.5:0.5" \
+    //     "--ring-color bb00cc" \
+    //     "--key-hl-color 880033" \
+    //     "--line-color 00000q000" \
+    //     "--inside-color 00000088" \
+    //     "--separator-color 00000000" \
+    //     "--grace 2" \
+    //     "--grace-no-mouse" \
+    //     "--fade-in 0.2" \
+    // ; }
+    // Mod+Alt+L { spawn allow-inhibiting=false "swaylock" \
+    //     "--screenshots" \
+    //     "--clock" \
+    //     "--indicator" \
+    //     "--indicator-radius 100" \
+    // ; }
 
     // You can also use a shell. Do this if you need pipes, multiple commands, etc.
     // Note: the entire command goes as a single argument in the end.
@@ -375,14 +452,14 @@ binds {
     Mod+K     { focus-window-up; }
     Mod+L     { focus-column-right; }
 
-    Mod+Ctrl+Left  { move-column-left; }
-    Mod+Ctrl+Down  { move-window-down; }
-    Mod+Ctrl+Up    { move-window-up; }
-    Mod+Ctrl+Right { move-column-right; }
-    Mod+Ctrl+H     { move-column-left; }
-    Mod+Ctrl+J     { move-window-down; }
-    Mod+Ctrl+K     { move-window-up; }
-    Mod+Ctrl+L     { move-column-right; }
+    Mod+Shift+Left  { move-column-left; }
+    Mod+Shift+Down  { move-window-down; }
+    Mod+Shift+Up    { move-window-up; }
+    Mod+Shift+Right { move-column-right; }
+    Mod+Shift+H     { move-column-left; }
+    Mod+Shift+J     { move-window-down; }
+    Mod+Shift+K     { move-window-up; }
+    Mod+Shift+L     { move-column-right; }
 
     // Alternative commands that move across workspaces when reaching
     // the first or last window in a column.
@@ -396,23 +473,23 @@ binds {
     Mod+Ctrl+Home { move-column-to-first; }
     Mod+Ctrl+End  { move-column-to-last; }
 
-    Mod+Shift+Left  { focus-monitor-left; }
-    Mod+Shift+Down  { focus-monitor-down; }
-    Mod+Shift+Up    { focus-monitor-up; }
-    Mod+Shift+Right { focus-monitor-right; }
-    Mod+Shift+H     { focus-monitor-left; }
-    Mod+Shift+J     { focus-monitor-down; }
-    Mod+Shift+K     { focus-monitor-up; }
-    Mod+Shift+L     { focus-monitor-right; }
+    Mod+Ctrl+Left  { focus-monitor-left; }
+    Mod+Ctrl+Down  { focus-monitor-down; }
+    Mod+Ctrl+Up    { focus-monitor-up; }
+    Mod+Ctrl+Right { focus-monitor-right; }
+    Mod+Ctrl+H     { focus-monitor-left; }
+    Mod+Ctrl+J     { focus-monitor-down; }
+    Mod+Ctrl+K     { focus-monitor-up; }
+    Mod+Ctrl+L     { focus-monitor-right; }
 
-    Mod+Shift+Ctrl+Left  { move-column-to-monitor-left; }
-    Mod+Shift+Ctrl+Down  { move-column-to-monitor-down; }
-    Mod+Shift+Ctrl+Up    { move-column-to-monitor-up; }
-    Mod+Shift+Ctrl+Right { move-column-to-monitor-right; }
-    Mod+Shift+Ctrl+H     { move-column-to-monitor-left; }
-    Mod+Shift+Ctrl+J     { move-column-to-monitor-down; }
-    Mod+Shift+Ctrl+K     { move-column-to-monitor-up; }
-    Mod+Shift+Ctrl+L     { move-column-to-monitor-right; }
+    Mod+Shift+Ctrl+Left  { move-workspace-to-monitor-left; }
+    Mod+Shift+Ctrl+Down  { move-workspace-to-monitor-down; }
+    Mod+Shift+Ctrl+Up    { move-workspace-to-monitor-up; }
+    Mod+Shift+Ctrl+Right { move-workspace-to-monitor-right; }
+    Mod+Shift+Ctrl+H     { move-workspace-to-monitor-left; }
+    Mod+Shift+Ctrl+J     { move-workspace-to-monitor-down; }
+    Mod+Shift+Ctrl+K     { move-workspace-to-monitor-up; }
+    Mod+Shift+Ctrl+L     { move-workspace-to-monitor-right; }
 
     // Alternatively, there are commands to move just a single window:
     // Mod+Shift+Ctrl+Left  { move-window-to-monitor-left; }
@@ -489,21 +566,21 @@ binds {
     Mod+7 { focus-workspace 7; }
     Mod+8 { focus-workspace 8; }
     Mod+9 { focus-workspace 9; }
-    Mod+Ctrl+1 { move-column-to-workspace 1; }
-    Mod+Ctrl+2 { move-column-to-workspace 2; }
-    Mod+Ctrl+3 { move-column-to-workspace 3; }
-    Mod+Ctrl+4 { move-column-to-workspace 4; }
-    Mod+Ctrl+5 { move-column-to-workspace 5; }
-    Mod+Ctrl+6 { move-column-to-workspace 6; }
-    Mod+Ctrl+7 { move-column-to-workspace 7; }
-    Mod+Ctrl+8 { move-column-to-workspace 8; }
-    Mod+Ctrl+9 { move-column-to-workspace 9; }
+    Mod+Shift+1 { move-column-to-workspace 1; }
+    Mod+Shift+2 { move-column-to-workspace 2; }
+    Mod+Shift+3 { move-column-to-workspace 3; }
+    Mod+Shift+4 { move-column-to-workspace 4; }
+    Mod+Shift+5 { move-column-to-workspace 5; }
+    Mod+Shift+6 { move-column-to-workspace 6; }
+    Mod+Shift+7 { move-column-to-workspace 7; }
+    Mod+Shift+8 { move-column-to-workspace 8; }
+    Mod+Shift+9 { move-column-to-workspace 9; }
 
     // Alternatively, there are commands to move just a single window:
     // Mod+Ctrl+1 { move-window-to-workspace 1; }
 
     // Switches focus between the current and the previous workspace.
-    // Mod+Tab { focus-workspace-previous; }
+    Mod+Tab { focus-workspace-previous; }
 
     // The following binds move the focused window in and out of a column.
     // If the window is alone, they will consume it into the nearby column to the side.

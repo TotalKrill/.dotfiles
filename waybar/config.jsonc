@@ -60,7 +60,7 @@
     "hyprland/window"
   ],
   "niri/workspaces": {
-    "format": "{icon}",
+    "format": "{icon}: {name}",
     "format-icons": {
       "1": "1",
       "2": "2",

@@ -7,8 +7,6 @@
 #- clean: ['~', '~/.config']
 
 - link:
-    ~/.config/i3/config: i3/config
-    ~/.config/i3blocks/config: i3/i3blocksconfig
     ~/.config/alacritty:
     ~/.config/smartcat:
     ~/.config/helix: 
@@ -22,8 +20,6 @@
     ~/.bashrc:
     ~/.ssh/config: ssh/config
     ~/.gitconfig:
-    ~/.gdbinit:
-    ~/.i3status.conf:
     ~/.profile:
     ~/.Xmodmap:
     ~/.Xresources:

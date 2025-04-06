@@ -1,4 +1,4 @@
-lock "swaylock -f --grace 10 --fade-in 8"
+lock "sh ¨/.config/hypr/swaylock.sh"
 unlock "pkill -9 swaylock"
 idlehint 580
 timeout 960 "hyprctl dispatch dpms off" resume "hyprctl dispatch dpms on"
