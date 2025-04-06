@@ -18,6 +18,7 @@
     ~/.config/swayidle: 
     ~/.config/flameshot: 
     ~/.bashrc:
+    ~/.config/swaylock.sh:
     ~/.ssh/config: ssh/config
     ~/.gitconfig:
     ~/.profile:

@@ -9,6 +9,8 @@ spawn-at-startup "polkit-kde-agent"
 spawn-at-startup "syncthing"
 spawn-at-startup "blueman-applet"
 spawn-at-startup "xwayland-satellite"
+spawn-at-startup "swayidle"
+
 
 environment {
     DISPLAY ":0"
@@ -404,31 +406,7 @@ binds {
     Mod+Return{ spawn "alacritty"; }
     Mod+E { spawn "nemo"; }
     Mod+D { spawn "fuzzel"; }
-    // Mod+Alt+L { spawn "swaylock"; }
-    Mod+Alt+L { spawn "~/.config/hypr/swaylock.sh"; }
-    // Mod+Alt+L { spawn "swaylock" \
-    //     "--screenshots" \
-    //     "--clock" \
-    //     "--indicator" \
-    //     "--indicator-radius 100" \
-    //     "--indicator-thickness 7" \
-    //     "--effect-blur 7x5" \
-    //     "--effect-vignette 0.5:0.5" \
-    //     "--ring-color bb00cc" \
-    //     "--key-hl-color 880033" \
-    //     "--line-color 00000q000" \
-    //     "--inside-color 00000088" \
-    //     "--separator-color 00000000" \
-    //     "--grace 2" \
-    //     "--grace-no-mouse" \
-    //     "--fade-in 0.2" \
-    // ; }
-    // Mod+Alt+L { spawn allow-inhibiting=false "swaylock" \
-    //     "--screenshots" \
-    //     "--clock" \
-    //     "--indicator" \
-    //     "--indicator-radius 100" \
-    // ; }
+    Mod+Alt+L { spawn "~/.config/swaylock.sh"; }
 
     // You can also use a shell. Do this if you need pipes, multiple commands, etc.
     // Note: the entire command goes as a single argument in the end.
