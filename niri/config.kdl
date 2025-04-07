@@ -127,7 +127,9 @@ window-rule {
     match app-id=r#"Discord"#
 
     open-on-workspace "chat"
+    block-out-from "screencast"
     open-focused true
+
 }
 
 workspace "browsers" {
