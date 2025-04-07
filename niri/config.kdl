@@ -125,7 +125,9 @@ window-rule {
     match app-id=r#"^org\.telegram\.desktop$"#
     match app-id=r#"Slack"#
     match app-id=r#"Discord"#
+
     open-on-workspace "chat"
+    open-focused true
 }
 
 workspace "browsers" {
@@ -137,7 +139,9 @@ window-rule {
     match app-id=r#"brave-browser"#
     match app-id=r#"google-chrome"#
     match app-id=r#"firefox"#
+
     open-on-workspace "browsers"
+    open-focused true
 }
 
 
@@ -151,9 +155,12 @@ window-rule {
     match app-id=r#"FreeCAD"# title=r#"(.*)(ocument)$"#
     match app-id=r#"FreeCAD"# title=r#"(.*)(ile)$"#
     match app-id="nemo"
+
     default-window-height { proportion 0.66; }
     default-column-width { proportion 0.5; }
+
     open-floating true
+    open-focused true
 }
 
 window-rule {
@@ -161,7 +168,9 @@ window-rule {
     match app-id=r#"BambuStudio"#
     match app-id=r#"FreeCAD"#
     match app-id=r#"Blender"#
+
     open-on-workspace "cad"
+    open-focused true
 }
 
 // Settings that influence how windows are positioned and sized.
