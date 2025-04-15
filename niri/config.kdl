@@ -414,7 +414,7 @@ binds {
     Mod+Shift+Slash { show-hotkey-overlay; }
 
     // Suggested binds for running programs: terminal, app launcher, screen locker.
-    Mod+Return{ spawn "alacritty"; }
+    Mod+Return{ spawn "bash" "-c" "exec alacritty --working-directory \"$(~/.config/niri/niricwd.sh)\""; }
     Mod+E { spawn "nemo"; }
     Mod+D { spawn "fuzzel"; }
     Mod+Alt+L { spawn "~/.config/swaylock.sh"; }
