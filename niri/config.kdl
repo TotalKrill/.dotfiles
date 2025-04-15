@@ -456,8 +456,6 @@ binds {
     // the first or last window in a column.
     // Mod+J     { focus-window-or-workspace-down; }
     // Mod+K     { focus-window-or-workspace-up; }
-    // Mod+Ctrl+J     { move-window-down-or-to-workspace-down; }
-    // Mod+Ctrl+K     { move-window-up-or-to-workspace-up; }
 
     Mod+Home { focus-column-first; }
     Mod+End  { focus-column-last; }
@@ -469,8 +467,8 @@ binds {
     Mod+Ctrl+Up    { focus-monitor-up; }
     Mod+Ctrl+Right { focus-monitor-right; }
     Mod+Ctrl+H     { focus-monitor-left; }
-    Mod+Ctrl+J     { focus-monitor-down; }
-    Mod+Ctrl+K     { focus-monitor-up; }
+    // Mod+Ctrl+J     { focus-monitor-down; }
+    // Mod+Ctrl+K     { focus-monitor-up; }
     Mod+Ctrl+L     { focus-monitor-right; }
 
     Mod+Shift+Ctrl+Left  { move-workspace-to-monitor-left; }
@@ -478,8 +476,8 @@ binds {
     Mod+Shift+Ctrl+Up    { move-workspace-to-monitor-up; }
     Mod+Shift+Ctrl+Right { move-workspace-to-monitor-right; }
     Mod+Shift+Ctrl+H     { move-workspace-to-monitor-left; }
-    Mod+Shift+Ctrl+J     { move-workspace-to-monitor-down; }
-    Mod+Shift+Ctrl+K     { move-workspace-to-monitor-up; }
+    Mod+Shift+Ctrl+J     { move-column-to-workspace-down; }
+    Mod+Shift+Ctrl+K     { move-column-to-workspace-up; }
     Mod+Shift+Ctrl+L     { move-workspace-to-monitor-right; }
 
     // Alternatively, there are commands to move just a single window:
