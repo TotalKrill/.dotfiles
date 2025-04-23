@@ -34,6 +34,7 @@ window#waybar {
   border: 1px solid @black; 
   margin-left: 10px;
 }
+
 .modules-center {
   background-color: rgba(255,255,255,0.1);
     border-radius: 15px; 
@@ -135,18 +136,12 @@ tooltip label {
   animation: colored-gradient 10s ease infinite;
 }
 
-/* #taskbar button.maximized {} */
-
-/* #taskbar button.minimized {} */
-
 #taskbar button.active {
   border: 1px solid @darkgray;
   border-radius: 8px;
   transition: all 0.3s ease;
   animation: colored-gradient 10s ease infinite;
 }
-
-/* #taskbar button.fullscreen {} */
 
 /* -------------------------------------------------------------------------------- */
 

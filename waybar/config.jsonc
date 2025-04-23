@@ -53,12 +53,65 @@
       }
     }
   },
+
   "modules-center": [
+    "group/window-navigate",
     "hyprland/workspaces",
     "niri/workspaces",
     "hyprland/submap",
     "hyprland/window"
   ],
+
+  "group/window-navigate": {
+    "orientation": "inherit",
+    "modules": [
+      "custom/column-left",
+      "group/window-actions",
+      "custom/column-right",
+      "custom/separator"
+    ]
+  },
+  "group/window-actions": {
+    "orientation": "inherit",
+    "drawer": {"click-to-reveal": true},
+    "modules": [
+      "niri/window",
+      "custom/window-toggle-full",
+      "custom/window-print",
+      "custom/window-close",
+    ]
+  },
+
+  "custom/window-print": {
+    "format": " Print ",
+    "on-click": "niri msg action screenshot-window"
+  },
+
+  "custom/window-toggle-full": {
+    "format": " Max ",
+    "on-click": "niri msg action maximize-column"
+  },
+
+  "custom/window-close": {
+    "format": " Close ",
+    "on-click": "niri msg action close-window"
+  },
+
+  "custom/separator": {
+    "format": " | ",
+  },
+
+  "custom/column-left": {
+    "format": " ⇠ ",
+    "on-click": "niri msg action focus-column-left"
+  },
+
+  "custom/column-right": {
+    "format": " ⇢ ",
+    "on-click": "niri msg action focus-column-right"
+  },
+  
+
   "niri/workspaces": {
     "format": "{icon}: {name}",
     "format-icons": {
@@ -99,6 +152,7 @@
     "format": " <span font_desc='Iosevka Raven 12'>{:.40}</span> ",
     "separate-outputs": false
   },
+
   "modules-right": [
     "tray",
     "cpu",
@@ -132,7 +186,7 @@
     "tooltip": false
   },
   "memory": {
-    "format": "󰍛 {used:0.1f}GB ({percentage}%) / {total:0.1f}GB",
+    "format": "󰍛 {used:0.1f}GB ({percentage}%)",
     "on-click": "alacritty -T AlacrittyBtm -e btm",
     "tooltip": false
   },
@@ -175,7 +229,7 @@
     "format": "{format_source}",
     "format-source": "󰍬 {volume}%",
     "format-source-muted": "󰍭 {volume}%",
-    "on-click": "pactl set-source-mute @DEFAULT_SOURCE@ toggle && ~/.config/dunst/scripts/show_mute_microphone.sh",
+    "on-click": "pactl set-source-mute @DEFAULT_SOURCE@ toggle",
     "on-click-right": "pavucontrol",
     "on-scroll-up": "pactl set-source-volume @DEFAULT_SOURCE@ +1%",
     "on-scroll-down": "pactl set-source-volume @DEFAULT_SOURCE@ -1%",
