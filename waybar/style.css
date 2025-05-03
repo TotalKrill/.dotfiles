@@ -1,9 +1,9 @@
-@define-color white      #F2F2F2;
-@define-color black      #000203;
-@define-color text       #BECBCB;
-@define-color lightgray  #686868;
-@define-color darkgray   #353535;
-@define-color red        #F38BA8;
+@define-color white #F2F2F2;
+@define-color black #000203;
+@define-color text #BECBCB;
+@define-color lightgray #686868;
+@define-color darkgray #353535;
+@define-color red #F38BA8;
 
 @define-color black-transparent-1 rgba(0, 0, 0, 0.1);
 @define-color black-transparent-2 rgba(0, 0, 0, 0.2);
@@ -14,37 +14,42 @@
 @define-color black-transparent-7 rgba(0, 0, 0, 0.7);
 @define-color black-transparent-8 rgba(0, 0, 0, 0.8);
 @define-color black-transparent-9 rgba(0, 0, 0, 0.9);
-@define-color black-solid         rgba(0, 0, 0, 1.0);
+@define-color black-solid rgba(0, 0, 0, 1.0);
+
 
 * {
   font-family: Iosevka, Material Design Icons Desktop;
-  font-size: 16px;
+  font-size: 12px;
 }
 
 window#waybar {
   background-color: @transparent;
   color: @text;
-  border-radius: 14px; 
-  border: 0px solid @black; 
+  border-radius: 8px;
+  border: 0px solid @black;
+}
+
+.modules {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  border: 1px solid @black;
 }
 
 .modules-left {
-  background-color: rgba(255,255,255,0.1);
-  border-radius: 15px; 
-  border: 1px solid @black; 
   margin-left: 10px;
 }
 
 .modules-center {
-  background-color: rgba(255,255,255,0.1);
-    border-radius: 15px; 
-  border: 1px solid @black; 
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  border: 1px solid @black;
 }
-.modules-right{
-  background-color: rgba(255,255,255,0.1);
-  border-radius: 15px; 
-  border: 1px solid @black; 
-  padding: 1px 8px;
+
+.modules-right {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  border: 1px solid @black;
+  padding: 1px 4px;
   margin-right: 10px;
 }
 
@@ -53,6 +58,7 @@ tooltip {
   border: 1px solid @darkgray;
   border-radius: 10px;
 }
+
 tooltip label {
   color: @text;
 }
@@ -70,12 +76,12 @@ tooltip label {
   background-color: transparent;
   color: @text;
   /* border: 1px solid @darkgray; */
-  padding: 1px 8px;
-  margin-top: 5px;
-  margin-bottom: 5px;
+  padding: 1px 4px;
+  margin-top: 3px;
+  margin-bottom: 3px;
   margin-left: 1px;
   margin-right: 1px;
-  border-radius: 20px;
+  border-radius: 12px;
   transition: all 0.3s ease;
 }
 
@@ -115,15 +121,15 @@ tooltip label {
 
 #taskbar {
   border-radius: 8px;
-  margin-top: 4px;
-  margin-bottom: 4px;
+  margin-top: 3px;
+  margin-bottom: 3px;
   margin-left: 1px;
   margin-right: 1px;
 }
 
 #taskbar button {
   color: @text;
-  padding: 1px 8px;
+  padding: 1px 4px;
   margin-left: 1px;
   margin-right: 1px;
 }
@@ -163,9 +169,9 @@ tooltip label {
 #custom-notification {
   background-color: transparent;
   color: @text;
-  padding: 1px 8px;
-  margin-top: 5px;
-  margin-bottom: 5px;
+  padding: 1px 4px;
+  margin-top: 3px;
+  margin-bottom: 3px;
   margin-left: 2px;
   margin-right: 2px;
   /* border: 1px solid @darkgray; */
@@ -201,44 +207,44 @@ tooltip label {
 
 /* If workspaces is the leftmost module, omit left margin */
 /* .modules-left > widget:first-child > #workspaces, */
-.modules-left > widget:first-child > #workspaces button,
-.modules-left > widget:first-child > #taskbar button,
-.modules-left > widget:first-child > #custom-launcher,
-.modules-left > widget:first-child > #window,
-.modules-left > widget:first-child > #tray,
-.modules-left > widget:first-child > #cpu,
-.modules-left > widget:first-child > #memory,
-.modules-left > widget:first-child > #backlight,
-.modules-left > widget:first-child > #pulseaudio.audio,
-.modules-left > widget:first-child > #pulseaudio.microphone,
-.modules-left > widget:first-child > #network,
-.modules-left > widget:first-child > #bluetooth,
-.modules-left > widget:first-child > #battery,
-.modules-left > widget:first-child > #clock,
-.modules-left > widget:first-child > #custom-powermenu,
-.modules-left > widget:first-child > #custom-notification {
+.modules-left>widget:first-child>#workspaces button,
+.modules-left>widget:first-child>#taskbar button,
+.modules-left>widget:first-child>#custom-launcher,
+.modules-left>widget:first-child>#window,
+.modules-left>widget:first-child>#tray,
+.modules-left>widget:first-child>#cpu,
+.modules-left>widget:first-child>#memory,
+.modules-left>widget:first-child>#backlight,
+.modules-left>widget:first-child>#pulseaudio.audio,
+.modules-left>widget:first-child>#pulseaudio.microphone,
+.modules-left>widget:first-child>#network,
+.modules-left>widget:first-child>#bluetooth,
+.modules-left>widget:first-child>#battery,
+.modules-left>widget:first-child>#clock,
+.modules-left>widget:first-child>#custom-powermenu,
+.modules-left>widget:first-child>#custom-notification {
   margin-left: 5px;
 }
 
 /* If workspaces is the rightmost module, omit right margin */
 /* .modules-right > widget:last-child > #workspaces, */
 /* .modules-right > widget:last-child > #workspaces, */
-.modules-right > widget:last-child > #workspaces button,
-.modules-right > widget:last-child > #taskbar button,
-.modules-right > widget:last-child > #custom-launcher,
-.modules-right > widget:last-child > #window,
-.modules-right > widget:last-child > #tray,
-.modules-right > widget:last-child > #cpu,
-.modules-right > widget:last-child > #memory,
-.modules-right > widget:last-child > #backlight,
-.modules-right > widget:last-child > #pulseaudio.audio,
-.modules-right > widget:last-child > #pulseaudio.microphone,
-.modules-right > widget:last-child > #network,
-.modules-right > widget:last-child > #bluetooth,
-.modules-right > widget:last-child > #battery,
-.modules-right > widget:last-child > #clock,
-.modules-right > widget:last-child > #custom-powermenu,
-.modules-right > widget:last-child > #custom-notification {
+.modules-right>widget:last-child>#workspaces button,
+.modules-right>widget:last-child>#taskbar button,
+.modules-right>widget:last-child>#custom-launcher,
+.modules-right>widget:last-child>#window,
+.modules-right>widget:last-child>#tray,
+.modules-right>widget:last-child>#cpu,
+.modules-right>widget:last-child>#memory,
+.modules-right>widget:last-child>#backlight,
+.modules-right>widget:last-child>#pulseaudio.audio,
+.modules-right>widget:last-child>#pulseaudio.microphone,
+.modules-right>widget:last-child>#network,
+.modules-right>widget:last-child>#bluetooth,
+.modules-right>widget:last-child>#battery,
+.modules-right>widget:last-child>#clock,
+.modules-right>widget:last-child>#custom-powermenu,
+.modules-right>widget:last-child>#custom-notification {
   margin-right: 5px;
 }
 
@@ -246,12 +252,14 @@ tooltip label {
 
 #tray {
   background-color: transparent;
-  padding: 1px 8px;
+  padding: 1px 4px;
 }
-#tray > .passive {
+
+#tray>.passive {
   -gtk-icon-effect: dim;
 }
-#tray > .needs-attention {
+
+#tray>.needs-attention {
   -gtk-icon-effect: highlight;
   background-color: @red;
 }

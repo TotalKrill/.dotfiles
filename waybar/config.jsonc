@@ -3,7 +3,7 @@
   "layer": "top",
   // "output": [],
   "position": "top",
-  "height": 40,
+  "height": 30,
   // "width": 900,
   // "margin": "",
   "margin-top": 4,
@@ -163,22 +163,22 @@
     // "bluetooth",
     "network",
     // "network#eno1"
-    // "battery"
+    // "battery",
     "custom/power"
   ],
   "custom/power": {
-    "format":  " ⏻ ",
+    "format": " ⏻ ",
     "on-click": "sleep 0.15 && sh ~/.config/waybar/wofi-power.sh",
     "tooltip": false
   },
   "custom/applications": {
-    "format":  "  ☰ ",
+    "format": "  ☰ ",
     "on-click": "sleep 0.15 && wofi --show drun",
     "tooltip": false
   },
   "tray": {
-    "icon-size": 22,
-    "spacing": 10
+    "icon-size": 18,
+    "spacing": 5
   },
   "cpu": {
     "format": "󰻠 {usage}%",
