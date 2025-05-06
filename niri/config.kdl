@@ -13,6 +13,14 @@ spawn-at-startup "swayidle"
 
 prefer-no-csd
 
+output "DP-1" {
+    mode "2560x1440@59.951"
+    position x=0 y=0
+}
+output "HDMI-A-1" {
+    mode "2560x1440@59.951"
+}
+
 environment {
     DISPLAY ":0"
 }
