@@ -56,11 +56,32 @@
 
   "modules-center": [
     "group/window-navigate",
-    "hyprland/workspaces",
-    "niri/workspaces",
-    "hyprland/submap",
+    "custom/separator",
+    "group/workspaces",
     "hyprland/window"
   ],
+
+  "group/workspaces": {
+    "orientation": "inherit",
+    "modules": [
+      "custom/workspace-up",
+      "custom/workspace-down",
+      "custom/separator",
+      "niri/workspaces",
+      "hyprland/workspaces",
+      "hyprland/submap"
+    ]
+  },
+
+  "custom/workspace-up": {
+    "format": "<b> ↥ </b>",
+    "on-click": "niri msg action focus-workspace-up"
+  },
+
+  "custom/workspace-down": {
+    "format": "<b> ↧ </b>",
+    "on-click": "niri msg action focus-workspace-down"
+  },
 
   "group/window-navigate": {
     "orientation": "inherit",
@@ -68,7 +89,6 @@
       "custom/column-left",
       "group/window-actions",
       "custom/column-right",
-      "custom/separator"
     ]
   },
   "group/window-actions": {
@@ -80,6 +100,14 @@
       "custom/window-print",
       "custom/window-close",
     ]
+  },
+
+  "niri/window": {
+  	"format": "<b>Window</b>",
+  	// "rewrite": {
+  	// 	"(.*) - Mozilla Firefox": "🌎 $1",
+  	// 	"(.*) - zsh": "> [$1]"
+  	// }
   },
 
   "custom/window-print": {
@@ -102,12 +130,12 @@
   },
 
   "custom/column-left": {
-    "format": " ⇠ ",
+    "format": "<b> ⇠ </b>",
     "on-click": "niri msg action focus-column-left"
   },
 
   "custom/column-right": {
-    "format": " ⇢ ",
+    "format": "<b> ⇢ </b>",
     "on-click": "niri msg action focus-column-right"
   },
   
