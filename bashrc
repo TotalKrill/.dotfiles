@@ -79,9 +79,9 @@ ssh-add -l >/dev/null || alias ssh='ssh-add -l >/dev/null || ssh-add && unalias 
 # prompt
 #PS1='[\u@\h \W]\$ '
 PS1='\[\033[01;32m\][\u@\h\[\033[01;37m\] \W\[\033[01;32m\]]\$\[\033[00m\] '
-bind "TAB:menu-complete"
-bind "set show-all-if-ambiguous on"
-bind "set menu-complete-display-prefix on"
+# bind "TAB:menu-complete"
+# bind "set show-all-if-ambiguous on"
+# bind "set menu-complete-display-prefix on"
 
 LS_COLORS=$LS_COLORS:'di=0,35:'; export LS_COLORS
 
@@ -98,8 +98,3 @@ export PATH=$PATH:$ANDROID_ROOT/emulator
 export PATH=$PATH:$ANDROID_SDK_ROOT/tools/
 
 export CHROME_EXECUTABLE=google-chrome-stable
-
-exec fish
-
-
-[ -f ~/.fzf.bash ] && source ~/.fzf.bash
