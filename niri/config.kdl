@@ -155,6 +155,18 @@ window-rule {
 workspace "cad" {
     
 }
+// floating windows
+window-rule {
+    match at-startup=true
+    match app-id=r#"FreeCAD"# title=r#"^Insert.*$"#
+    match app-id=r#"FreeCAD"# title=r#"^Active.*$"#
+
+    default-window-height { proportion 0.15; }
+    default-column-width { proportion 0.2; }
+
+    open-floating true
+    open-focused true
+}
 
 // floating windows
 window-rule {
