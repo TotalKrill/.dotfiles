@@ -2,10 +2,6 @@ if [ -f /etc/bash_completion ]; then
 	    . /etc/bash_completion
 fi
 
-xhost +local:root > /dev/null 2>&1
-#store tty in temp
-echo $(tty) > /tmp/termtty
-
 complete -cf sudo
 
 shopt -s cdspell
@@ -29,11 +25,7 @@ alias grep='grep --color=tty -d skip'
 alias cp="cp -i"                          # confirm before overwriting something
 alias df='df -h'                          # human-readable sizes
 alias free='free -m'                      # show sizes in MB
-alias np='nvim PKGBUILD'
 alias fixit='sudo rm -f /var/lib/pacman/db.lck'
-alias update='yaourt -Syua'
-alias con='nvim $HOME/.i3/config'
-alias comp='nvim $HOME/.config/compton.conf'
 alias inst='sudo pacman -S'
 alias mirrors='sudo pacman-mirrors -g'
 alias printer='system-config-printer'
@@ -84,8 +76,6 @@ PS1='\[\033[01;32m\][\u@\h\[\033[01;37m\] \W\[\033[01;32m\]]\$\[\033[00m\] '
 # bind "set menu-complete-display-prefix on"
 
 LS_COLORS=$LS_COLORS:'di=0,35:'; export LS_COLORS
-
-alias vim='nvim'
 
 alias steam='STEAM_RUNTIME=0 steam'
 

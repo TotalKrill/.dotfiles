@@ -8,13 +8,16 @@
 
 - link:
     ~/.config/alacritty:
-    ~/.config/smartcat:
     ~/.config/helix: 
     ~/.config/waybar: 
     ~/.config/wofi: 
     ~/.config/mako: 
     ~/.config/hypr: 
     ~/.config/niri: 
+    ~/.config/herdr:
+    ~/.pi/agent/settings.json: pi/agent/settings.json
+    ~/.pi/agent/skills: pi/agent/skills
+    ~/AGENTS.md: AGENTS.md
     ~/.config/swayidle: 
     ~/.config/flameshot: 
     ~/.bashrc:

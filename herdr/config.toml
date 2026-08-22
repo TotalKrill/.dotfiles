@@ -1,0 +1,33 @@
+# herdr configuration
+
+[keys]
+# Layering: Alt = Herdr, Meta/Meta+Alt = KDE, Ctrl/Ctrl+Shift = shell/Alacritty.
+focus_pane_left = "alt+h"
+focus_pane_down = "alt+j"
+focus_pane_up = "alt+k"
+focus_pane_right = "alt+l"
+
+previous_tab = "alt+shift+h"
+next_tab = "alt+shift+l"
+new_tab = "alt+t"
+switch_tab = "alt+shift+1..9"
+
+switch_workspace = "alt+1..9"
+previous_workspace = "alt+shift+k"
+next_workspace = "alt+shift+j"
+new_workspace = "alt+shift+n"
+workspace_picker = "alt+w"
+
+split_vertical = "alt+enter"
+split_horizontal = "alt+minus"
+close_pane = "alt+shift+q"
+close_tab = "alt+shift+x"
+
+resize_mode = "alt+r"
+toggle_sidebar = "alt+b"
+goto = "alt+g"
+
+[[keys.command]]
+key = "ctrl+alt+r"
+type = "plugin_action"
+command = "persiyanov.reviewr.toggle"

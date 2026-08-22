@@ -44,9 +44,6 @@ foreground = "0xeaeaea"
 style = "Block"
 unfocused_hollow = true
 
-[env]
-TERM = "xterm-256color"
-
 [font]
 size = 13.0
 
@@ -603,7 +600,6 @@ semantic_escape_chars = ",│`|:\"' ()[]{}<>"
 decorations = "full"
 dynamic_padding = false
 dynamic_title = true
-opacity = 0.8
 startup_mode = "Windowed"
 
 [window.dimensions]
