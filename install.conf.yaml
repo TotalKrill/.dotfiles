@@ -15,6 +15,8 @@
     ~/.config/hypr: 
     ~/.config/niri: 
     ~/.config/herdr:
+    ~/.config/kcminputrc: kde/kcminputrc
+    ~/.config/autostart/syncthing.desktop: kde/autostart/syncthing.desktop
     ~/.pi/agent/settings.json: pi/agent/settings.json
     ~/.pi/agent/skills: pi/agent/skills
     ~/AGENTS.md: AGENTS.md
