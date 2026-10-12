@@ -2,3 +2,11 @@ old.*
 ssh/id_rsa
 ssh/id_rsa.pub
 ssh/known_hosts
+
+# Pi agent secrets / runtime state. Only commit reviewed config such as
+# pi/agent/settings.json and non-secret skills.
+pi/agent/auth.json
+pi/agent/trust.json
+pi/agent/models*.json
+pi/agent/sessions/
+pi/agent/bin/

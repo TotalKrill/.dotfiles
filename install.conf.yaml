@@ -16,10 +16,12 @@
     ~/.config/niri: 
     ~/.config/herdr:
     ~/.config/kcminputrc: kde/kcminputrc
+    ~/.config/kglobalshortcutsrc: kde/kglobalshortcutsrc
     ~/.config/autostart/syncthing.desktop: kde/autostart/syncthing.desktop
     ~/.pi/agent/settings.json: pi/agent/settings.json
     ~/.pi/agent/skills: pi/agent/skills
-    ~/AGENTS.md: AGENTS.md
+    ~/.pi/agent/extensions: pi/agent/extensions
+    ~/AGENTS.md: home/AGENTS.md
     ~/.config/swayidle: 
     ~/.config/flameshot: 
     ~/.bashrc:
